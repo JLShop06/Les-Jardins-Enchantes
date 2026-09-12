@@ -235,6 +235,10 @@ function rewriteLinks($, lang, generatedForLang) {
   for (const [sel, attr] of attrs) {
     $(`${sel}[${attr}]`).each((i, el) => {
       const $el = $(el);
+      /* Les liens du selecteur de langue sont deja ecrits en absolu et
+         pointent volontairement vers une AUTRE langue : les reecrire les
+         casserait (le lien FR deviendrait /pt/... sur une page pt). */
+      if ($el.attr("data-lang") != null) return;
       let v = $el.attr(attr);
       if (!isRelativeLocal(v)) return;
       $el.attr(attr, "/" + v.replace(/^\.\//, ""));
@@ -245,6 +249,7 @@ function rewriteLinks($, lang, generatedForLang) {
      si elle a ete generee, sinon on laisse la version francaise. */
   $("a[href]").each((i, el) => {
     const $el = $(el);
+    if ($el.attr("data-lang") != null) return; // selecteur de langue : intouchable
     let raw = $el.attr("href");
     /* Les liens ecrits en absolu vers le site (https://.../page.html) restaient
        toujours francais sur les pages traduites : on les ramene a un chemin
@@ -264,6 +269,21 @@ function rewriteLinks($, lang, generatedForLang) {
     const $el = $(el);
     const v = $el.attr("content");
     if (isRelativeLocal(v)) $el.attr("content", BASE + "/" + v.replace(/^\.\//, ""));
+  });
+}
+
+/* Le bloc <div class="lang-switch"> est ecrit en dur dans la source FR :
+   ses 5 liens sont identiques dans toutes les langues, seul l'etat actif
+   change. On deplace donc is-active / aria-current sur la langue de la page
+   generee. Aucun href n'est modifie ici. */
+function setLangSwitchActive($, lang) {
+  $(".lang-switch a[data-lang]").each((i, el) => {
+    const $el = $(el);
+    const isActive = $el.attr("data-lang") === lang;
+    $el.removeClass("is-active").removeAttr("aria-current");
+    if (isActive) {
+      $el.addClass("is-active").attr("aria-current", "true");
+    }
   });
 }
 
@@ -342,6 +362,7 @@ function buildPage(srcHtml, file, lang, T, overrides, availableLangs, generatedF
   $('meta[name="keywords"]').remove();
 
   localizeJsonLd($, file, lang);
+  setLangSwitchActive($, lang);
   rewriteLinks($, lang, generatedForLang);
 
   return { html: $.html(), title, description };
