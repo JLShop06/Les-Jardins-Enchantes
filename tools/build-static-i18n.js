@@ -142,7 +142,7 @@ const slugOf = (file) => (file === "index.html" ? "" : file.replace(/\.html$/, "
 function urlFor(file, lang) {
   const slug = slugOf(file);
   const prefix = lang === "fr" ? "" : "/" + lang;
-  if (!slug) return BASE + prefix + "/";
+  if (!slug) return BASE + (prefix || "/");
   return BASE + prefix + "/" + encodeURI(slug);
 }
 
@@ -260,7 +260,7 @@ function rewriteLinks($, lang, generatedForLang) {
     let slug = decodeURI(pathPart.replace(/^\//, "").replace(/\.html$/, ""));
     const file = slug === "" ? "index.html" : slug + ".html";
     if (!generatedForLang.has(file)) return;
-    const target = slug === "" ? `/${lang}/` : `/${lang}/${encodeURI(slug)}`;
+    const target = slug === "" ? `/${lang}` : `/${lang}/${encodeURI(slug)}`;
     $el.attr("href", target + rest);
   });
 
