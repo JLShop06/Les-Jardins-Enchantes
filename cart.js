@@ -13,7 +13,7 @@
 
 /* >>> Chargeur i18n par section (optimise: commun + section de la page, fallback i18n.js complet) >>> */
 (function () {
-  var I18N_VER = "20260828a"; // bump ce numero pour forcer le rechargement des fichiers i18n (contourne le cache CDN/navigateur)
+  var I18N_VER = "20260924a"; // bump ce numero pour forcer le rechargement des fichiers i18n (contourne le cache CDN/navigateur)
   function runI18n() {
     try { if (typeof initI18n === 'function') initI18n(); } catch (e) {}
     try { if (typeof window.applyTranslations === 'function') window.applyTranslations(); } catch (e) {}

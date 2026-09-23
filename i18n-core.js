@@ -29,6 +29,11 @@ window.t = function(key){
 
 
 function getLang() {
+  /* Pages prerendues /pt/, /es/, /de/, /it/ : la langue du chemin fait foi.
+     Sans cela, un visiteur (ou Googlebot, navigator.language = en) recevait la
+     page traduite puis le JS la repassait en francais. */
+  var pathLang = ((location.pathname || "").match(/^\/(pt|es|de|it)(\/|$)/) || [])[1];
+  if (pathLang && TRANSLATIONS[pathLang]) { try { localStorage.setItem("lang", pathLang); } catch(e){} return pathLang; }
   var params = new URLSearchParams(location.search);
   var urlLang = (params.get("lang") || "").slice(0, 2).toLowerCase();
   if (urlLang && TRANSLATIONS[urlLang]) { try { localStorage.setItem("lang", urlLang); } catch(e){} return urlLang; }
@@ -107,6 +112,15 @@ if (document.readyState === "loading") {
   window.setLang = function(lang){
     if (SUPPORTED.indexOf(lang) === -1) lang = 'fr';
     try { localStorage.setItem('lang', lang); } catch(e){}
+    /* Si une version prerendue existe dans cette langue (hreflang), on y va :
+       c'est la vraie page traduite, avec sa propre URL. */
+    try {
+      var __alt = document.querySelector('link[rel="alternate"][hreflang="' + lang + '"]');
+      if (__alt && __alt.href) {
+        var __t = new URL(__alt.href, location.href);
+        if (__t.pathname.replace(/\/$/, '') !== location.pathname.replace(/\/$/, '')) { location.href = __t.pathname + __t.hash; return; }
+      }
+    } catch(e){}
     try { var __u = new URL(location.href); if (lang === 'fr') { __u.searchParams.delete('lang'); } else { __u.searchParams.set('lang', lang); } history.replaceState(null, '', __u); } catch(e){}
     document.documentElement.lang = lang;
     if (typeof initI18n === 'function') initI18n();
