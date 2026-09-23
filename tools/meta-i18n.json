@@ -265,5 +265,41 @@
       "title": "Bio-Massageöl: richtig auswählen und zu zweit anwenden",
       "description": "Bio-Massageöl richtig wählen (Zusammensetzung, Textur, Duft) und eine Massage zu zweit in 6 Schritten. Vorsichtsmaßnahmen und Verträglichkeit mit Kondomen."
     }
+  },
+  "blog-irritation-lubrifiant.html": {
+    "pt": {
+      "title": "Irritação após um lubrificante: causas e soluções",
+      "description": "Ardor, comichão ou vermelhidão após um lubrificante? Causas frequentes, gestos certos, quando consultar e como escolher um produto mais bem tolerado."
+    },
+    "it": {
+      "title": "Irritazione dopo un lubrificante: cause e soluzioni",
+      "description": "Bruciore, prurito o arrossamento dopo un lubrificante? Cause frequenti, cosa fare, quando consultare e come scegliere un prodotto meglio tollerato."
+    },
+    "es": {
+      "title": "Irritación tras un lubricante: causas y soluciones",
+      "description": "¿Escozor, picor o enrojecimiento tras un lubricante? Causas frecuentes, qué hacer, cuándo consultar y cómo elegir un producto mejor tolerado."
+    },
+    "de": {
+      "title": "Reizung nach einem Gleitmittel: Ursachen und Lösungen",
+      "description": "Brennen, Juckreiz oder Rötung nach einem Gleitmittel? Häufige Ursachen, richtige Schritte, wann zum Arzt und wie man ein verträglicheres Produkt wählt."
+    }
+  },
+  "blog-conservation-lubrifiant.html": {
+    "pt": {
+      "title": "Quanto tempo se conserva um lubrificante?",
+      "description": "Data-limite, prazo após abertura, condições de armazenamento e sinais de um lubrificante fora de prazo: o guia para o conservar e usar bem."
+    },
+    "it": {
+      "title": "Quanto si conserva un lubrificante?",
+      "description": "Data limite, durata dopo l'apertura, condizioni di conservazione e segnali di un lubrificante scaduto: la guida per conservarlo e usarlo al meglio."
+    },
+    "es": {
+      "title": "¿Cuánto tiempo se conserva un lubricante?",
+      "description": "Fecha límite, plazo tras la apertura, condiciones de almacenamiento y señales de un lubricante caducado: la guía para conservarlo y usarlo bien."
+    },
+    "de": {
+      "title": "Wie lange ist ein Gleitmittel haltbar?",
+      "description": "Haltbarkeitsdatum, Frist nach dem Öffnen, richtige Lagerung und Anzeichen für ein abgelaufenes Gleitmittel: der Ratgeber für sichere Anwendung."
+    }
   }
 }
