@@ -319,3 +319,92 @@ cartes produit de l'accueil. Le libelle des liens n'est pas modifie. */
 @media(max-width:900px){.related-products ul.related-grid{grid-template-columns:repeat(2,1fr)!important;gap:18px!important}}
 @media(max-width:420px){.related-products .related-card__name{font-size:15px!important;padding:12px 8px 14px!important}}
 
+
+/* ============================================================
+   THEME MARBRE NOIR IMPERIAL (26/09/2026)
+   Fond marbre noir profond veiné d'or + textes ivoire et or.
+   Remplace le fond "Suite romantique" sur toutes les pages.
+   ============================================================ */
+html{background-color:#0a0a0b!important}
+body{
+  background-color:#0a0a0b!important;
+  background-image:linear-gradient(180deg,rgba(6,6,7,.30) 0%,rgba(6,6,7,.18) 40%,rgba(6,6,7,.40) 100%),url("/fond-marbre-noir-imperial.webp")!important;
+  background-size:cover,cover!important;background-position:center,center!important;
+  background-repeat:no-repeat,no-repeat!important;background-attachment:fixed,fixed!important;
+  color:#ece3d3!important}
+@media(max-width:900px){
+  html body{background-image:none!important;background-color:transparent!important}
+  html body::before{content:"";position:fixed;inset:0;z-index:-1;background-image:linear-gradient(180deg,rgba(6,6,7,.30) 0%,rgba(6,6,7,.18) 40%,rgba(6,6,7,.40) 100%),url("/fond-marbre-noir-imperial.webp")!important;background-size:cover,cover!important;background-position:center,center!important;background-repeat:no-repeat!important}
+}
+/* Header */
+.lux-header{background:linear-gradient(180deg,rgba(10,10,11,.94) 0%,rgba(16,15,14,.94) 100%)!important;border-bottom:1px solid rgba(201,169,97,.55)!important;box-shadow:0 10px 30px rgba(0,0,0,.45)!important}
+.header-promo{color:#ecd9ae!important}
+.cat-nav__link,.categories-nav a,.lang-switch button,.lang-switch a,.lang-switch__btn{color:#d9bd7c!important;border-color:rgba(201,169,97,.4)!important;background:transparent!important}
+.categories-nav{background:rgba(10,10,11,.6)!important}
+.lux-cart{color:#f3e5c4!important;background:rgba(0,0,0,.35)!important;border-color:rgba(201,169,97,.5)!important}
+/* Accueil */
+.hero-bg{background:radial-gradient(ellipse at 50% 40%,rgba(0,0,0,.45) 0%,transparent 70%)!important}
+.hero-kicker,.hero-h1-text,.hero-divider{color:#d9bd7c!important}
+.hero-title,.hero-title em,.hero-baseline{color:#f6ecd8!important}
+.hero-desc,.hero-desc strong,.hero-badges span{color:#e6dccb!important;border-color:rgba(201,169,97,.45)!important}
+.hero-cta{background:linear-gradient(135deg,#d6b46a 0%,#a97c2f 100%)!important;color:#141210!important;border-color:#c9a961!important}
+h1,h2,h3,.cat-section__title,.seo-intro__title,.section-title{color:#e3c47f!important}
+p,li,td,th,dd,dt,label,.seo-intro__text,.seo-bottom,.tstory,.cat-section p{color:#e9e0d0!important}
+strong,b{color:#f0dcaa!important}
+a{color:#e3c47f}
+.tstory a{color:#e3c47f!important;border-color:rgba(201,169,97,.6)!important}
+/* Cartes produits */
+.product-grid article{background:rgba(14,13,12,.80)!important;border:1px solid rgba(201,169,97,.4)!important;box-shadow:0 10px 34px rgba(0,0,0,.5)!important}
+.product-grid article h3{color:#f3e9d6!important}
+.product-grid article strong{color:#e3c47f!important}
+.product-grid article button{background:transparent!important;color:#e3c47f!important;border:1px solid rgba(201,169,97,.6)!important}
+.product-grid article button:hover{background:linear-gradient(135deg,#d6b46a 0%,#a97c2f 100%)!important;color:#141210!important}
+/* Fiches produit */
+.product-page,.product-page .product-description,.product-page .product-list,.product-page .product-list li,.product-page .cta-block p,.product-page .product-subtitle{color:#e9e0d0!important}
+.product-page .product-container{background:rgba(14,13,12,.82)!important;border:1px solid rgba(201,169,97,.4)!important;box-shadow:0 10px 34px rgba(0,0,0,.5)!important}
+.product-page .product-title,.product-page .product-price{color:#e3c47f!important}
+/* Blog */
+.blog-article{background:rgba(14,13,12,.84)!important;border:1px solid rgba(201,169,97,.3)!important;color:#e9e0d0!important}
+.blog-meta,.blog-back{color:#cdb88a!important}
+.blog-warning,.blog-cta,.blog-faq{background:rgba(24,22,20,.9)!important;border-color:rgba(201,169,97,.4)!important;color:#e9e0d0!important}
+table{background:rgba(14,13,12,.85)!important}th{background:rgba(201,169,97,.18)!important}td,th{border-color:rgba(201,169,97,.3)!important}
+/* Pied de page */
+.footer,footer,.lux-footer{background:rgba(8,8,9,.92)!important;color:#d9cfbf!important;border-top:1px solid rgba(201,169,97,.35)!important}
+.footer a,footer a{color:#d9bd7c!important}
+/* Marbre : textes accueil, blog, pages légales */
+.seo-intro__text,.seo-bottom,.seo-bottom p,.seo-bottom li{color:#e9e0d0!important}
+.seo-bottom h2,.seo-bottom h3{color:#e3c47f!important}
+.seo-intro strong,.seo-bottom strong,.seo-intro a,.seo-bottom a,.hero-desc a{color:#f0d493!important}
+.seo-bottom>div,.seo-bottom section{background:rgba(14,13,12,.78)!important;border-color:rgba(201,169,97,.4)!important}
+.blog-article,.blog-list{color:#e9e0d0!important}
+.blog-article h1,.blog-list h1,.blog-article h2{color:#e3c47f!important;border-bottom-color:rgba(201,169,97,.35)!important}
+.blog-article h3,.blog-faq-q{color:#d9bd7c!important}
+.blog-article p,.blog-article li{color:#e9e0d0!important}
+.blog-article strong,.blog-warning strong{color:#f0d493!important}
+.blog-article a,.blog-back,.blog-card__tag,.blog-card__more{color:#e3c47f!important}
+.blog-meta,.blog-list__intro,.blog-card__desc{color:#cfc3ad!important}
+.blog-warning{background:rgba(120,30,30,.22)!important;border-left:4px solid #c9a961!important}
+.blog-cta{background:linear-gradient(135deg,#1a1712 0%,#0e0d0b 100%)!important;border:1px solid rgba(201,169,97,.5)!important;color:#f3e5c4!important}
+.blog-card{background:rgba(14,13,12,.82)!important;border:1px solid rgba(201,169,97,.4)!important}
+.blog-card:hover{border-color:rgba(201,169,97,.8)!important}
+.blog-card__title{color:#f3e9d6!important}
+.legal-page{color:#e9e0d0!important;background:rgba(14,13,12,.84)!important;border:1px solid rgba(201,169,97,.3)!important}
+.legal-page h1,.legal-page h2{color:#e3c47f!important}
+.legal-page h2{border-bottom-color:rgba(201,169,97,.35)!important}
+.legal-page h3,.legal-page strong{color:#d9bd7c!important}
+.legal-page .legal-subtitle,.legal-page .legal-meta{color:#cfc3ad!important}
+.legal-page p,.legal-page li{color:#e9e0d0!important}
+.legal-page a{color:#e3c47f!important;border-bottom-color:rgba(201,169,97,.5)!important}
+.legal-page a:hover{color:#fff1c9!important}
+.legal-callout{background:rgba(201,169,97,.10)!important;border-left:3px solid #c9a961!important}
+.legal-callout p{color:#e9e0d0!important}
+/* Header sombre partout (PC + mobile) */
+html body .lux-header,html body header.lux-header{background:linear-gradient(180deg,rgba(10,10,11,.96) 0%,rgba(18,16,14,.94) 100%)!important;border-bottom:1px solid rgba(201,169,97,.5)!important;box-shadow:0 10px 30px rgba(0,0,0,.45)!important}
+html body header.lux-header .header-promo{color:#ecd9ae!important}
+html body header.lux-header .cat-nav__link,html body header.lux-header .lang-switch button,html body header.lux-header .lang-switch a{color:#e6c98a!important;border-color:rgba(201,169,97,.4)!important;background:transparent!important}
+html body header.lux-header .lux-mbrand{color:#e6c98a!important}
+html body header.lux-header .lux-mbrand small{color:#c9a961!important}
+html body header.lux-header .lux-mmenus{border-color:rgba(201,169,97,.42)!important}
+html body header.lux-header .lux-mmenus .dd__btn{color:#e6c98a!important}
+html body header.lux-header .lux-mmenus .dd__panel,html body .dd__panel{background:#121110!important;border-color:rgba(201,169,97,.4)!important}
+html body header.lux-header .lux-mmenus .dd__item,html body .dd__item{color:#e6c98a!important}
