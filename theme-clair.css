@@ -435,3 +435,20 @@ html body .lje-btn-primary:not(#_lje1),html body .lje-btn-primary:not(#_lje1):ho
 html body .add-to-cart:not(#_lje1),html body .add-to-cart:not(#_lje1):hover{background:rgba(14,13,12,.9)!important;border:1px solid #d6b46a!important}
 html body .badge-naturel:not(#_lje1){background:transparent!important;border-color:rgba(201,169,97,.7)!important}
 html body .cta-block:not(#_lje1){background:rgba(14,13,12,.82)!important;border-color:rgba(201,169,97,.4)!important}
+
+/* ============================================================
+   MARBRE : HARMONISATION DE TOUTES LES PAGES (26/09/2026)
+   Fiches produit, cartes « produits associés », badges, sélecteurs.
+   Palette unique : fond noir, filets or, textes ivoire-or.
+   ============================================================ */
+html body .related-products .related-card:not(#_lje1){background:rgba(14,13,12,.84)!important;border:1px solid rgba(201,169,97,.4)!important;box-shadow:0 10px 34px rgba(0,0,0,.5)!important}
+html body .related-products .related-card:not(#_lje1):hover{border-color:rgba(201,169,97,.8)!important}
+html body .related-products .related-card__img:not(#_lje1){background:#0e0c0a!important}
+html body .badge-bio:not(#_lje1),html body .badge-naturel:not(#_lje1),html body .sans-badge:not(#_lje1){background:transparent!important;border:1px solid rgba(201,169,97,.7)!important}
+html body .yuka-badge:not(#_lje1){background:rgba(14,13,12,.85)!important;border:1px solid rgba(201,169,97,.6)!important}
+html body .ingredient-item:not(#_lje1){background:rgba(14,13,12,.82)!important;border:1px solid rgba(201,169,97,.35)!important}
+html body .size-options input:checked+label:not(#_lje1),html body .color-options input:checked+label:not(#_lje1){background:rgba(14,13,12,.9)!important;border:1px solid #d6b46a!important;box-shadow:0 0 0 1px #d6b46a inset,0 6px 20px rgba(201,169,97,.25)!important}
+html body .size-options label:not(#_lje1),html body .color-options label:not(#_lje1){border-color:rgba(201,169,97,.55)!important}
+html body #product-info:not(.x),html body .product-info:not(#_lje1){background:rgba(14,13,12,.86)!important;border:1px solid rgba(201,169,97,.4)!important;box-shadow:0 10px 34px rgba(0,0,0,.5)!important}
+html body .dd__item.is-active:not(#_lje1){background:rgba(201,169,97,.14)!important;box-shadow:inset 2px 0 0 #d6b46a!important}
+html body .blog-warning:not(#_lje1){background:rgba(14,13,12,.88)!important;border:1px solid rgba(201,169,97,.4)!important;border-left:3px solid #d6b46a!important}
