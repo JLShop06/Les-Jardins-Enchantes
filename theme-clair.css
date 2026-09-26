@@ -408,3 +408,15 @@ html body header.lux-header .lux-mmenus{border-color:rgba(201,169,97,.42)!import
 html body header.lux-header .lux-mmenus .dd__btn{color:#e6c98a!important}
 html body header.lux-header .lux-mmenus .dd__panel,html body .dd__panel{background:#121110!important;border-color:rgba(201,169,97,.4)!important}
 html body header.lux-header .lux-mmenus .dd__item,html body .dd__item{color:#e6c98a!important}
+
+/* ============================================================
+   MARBRE : VIGNETTES PRODUITS (26/09/2026)
+   Titres + contenance lisibles sur fond sombre ;
+   socle prix/panier noir et or à la place du bordeaux.
+   ============================================================ */
+html body .product-grid article .infos h3,html body .product-grid article .infos h3 a{color:#f3e9d6!important}
+html body .product-grid article .infos .product-format{color:#d9c9a6!important}
+html body .product-grid article .socle{background:linear-gradient(180deg,#17140f 0%,#0e0c0a 100%)!important;border-top:1px solid rgba(201,169,97,.55)!important}
+html body .product-grid article .socle strong{color:#e3c47f!important}
+html body .product-grid article .socle button{background:transparent!important;color:#e3c47f!important;border:1px solid rgba(201,169,97,.7)!important}
+html body .product-grid article .socle button:hover{background:linear-gradient(135deg,#d6b46a 0%,#a97c2f 100%)!important;color:#141210!important;border-color:#d6b46a!important}
