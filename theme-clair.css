@@ -420,3 +420,18 @@ html body .product-grid article .socle{background:linear-gradient(180deg,#17140f
 html body .product-grid article .socle strong{color:#e3c47f!important}
 html body .product-grid article .socle button{background:transparent!important;color:#e3c47f!important;border:1px solid rgba(201,169,97,.7)!important}
 html body .product-grid article .socle button:hover{background:linear-gradient(135deg,#d6b46a 0%,#a97c2f 100%)!important;color:#141210!important;border-color:#d6b46a!important}
+
+/* ============================================================
+   MARBRE : TOUS LES TEXTES IVOIRE-OR, AUCUN GRAS (26/09/2026)
+   ============================================================ */
+html body,html body *:not(#_lje1):not(#_lje2):not(svg):not(svg *){color:#ecdcb0!important;font-weight:400!important}
+html body ::placeholder{color:rgba(236,220,176,.6)!important}
+/* Boutons pleins or -> fond sombre, contour or (texte ivoire-or lisible) */
+html body .hero-cta,html body .hero-cta:hover,
+html body .product-grid article button:hover,html body .product-grid article .socle button:hover{background:rgba(14,13,12,.85)!important;border:1px solid #d6b46a!important}
+/* Fonds clairs/or -> sombres pour garder le texte ivoire-or lisible */
+html body .announce-bar:not(#_lje1),html body .skip-link:not(#_lje1){background:#0e0c0a!important;border-bottom:1px solid rgba(201,169,97,.45)!important}
+html body .lje-btn-primary:not(#_lje1),html body .lje-btn-primary:not(#_lje1):hover,
+html body .add-to-cart:not(#_lje1),html body .add-to-cart:not(#_lje1):hover{background:rgba(14,13,12,.9)!important;border:1px solid #d6b46a!important}
+html body .badge-naturel:not(#_lje1){background:transparent!important;border-color:rgba(201,169,97,.7)!important}
+html body .cta-block:not(#_lje1){background:rgba(14,13,12,.82)!important;border-color:rgba(201,169,97,.4)!important}
