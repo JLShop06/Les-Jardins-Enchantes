@@ -26,7 +26,7 @@
   st.textContent = CSS;
   document.head.appendChild(st);
 
-  var ATTRS = ['src', 'alt', 'width', 'height', 'loading', 'fetchpriority'];
+  var ATTRS = ['src', 'srcset', 'sizes', 'alt', 'width', 'height', 'loading', 'fetchpriority'];
   function swap(a, b) {
     ATTRS.forEach(function (n) {
       var va = a.getAttribute(n), vb = b.getAttribute(n);
